@@ -1,0 +1,26 @@
+{
+  "name": "chikakawara.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-ruby-sass": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chikakawara/chikakawara.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chikakawara/chikakawara.github.io/issues"
+  },
+  "homepage": "https://github.com/chikakawara/chikakawara.github.io#readme"
+}
