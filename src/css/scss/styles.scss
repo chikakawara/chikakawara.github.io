@@ -1,0 +1,79 @@
+/* variables */
+$font-base: 'Hiragino Maru Gothic Pro', 'ヒラギノ丸ゴ Pro W4', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+$font-gothic: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3';
+$font-gothic-bold: 'Hiragino Kaku Gothic StdN', 'ヒラギノ角ゴ StdN';
+$primary-color: #FFDC00;
+$secondary-color: #E74400;
+$bgcolor-light: #FAF9F4;
+$bgcolor-dark: #ECECEC;
+$link-color: #12A738;
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-base;
+}
+
+a {
+  color: $link-color;
+}
+header {
+  background: no-repeat center 10px/128px url(/src/img/portlait_mobile@2x.png) $primary-color;
+  h1 {
+    font-family: $font-gothic;
+    padding-top: 153px;
+    text-align: center;
+    .profession {
+      display: block;
+    }
+    .name {
+      color: $secondary-color;
+      display: block;
+      font-family: $font-gothic-bold;
+    }
+  }
+}
+
+nav {
+  display: none;
+}
+
+.area {
+  background-color: $bgcolor-light;
+  &:nth-child(even) {
+    background-color: $bgcolor-dark;
+  }
+  h2 {
+    font-family: $font-gothic;
+  }
+  h3 {
+    color: $secondary-color;
+  }
+}
+
+.certification {
+  background-color: $bgcolor-light;
+  border-radius: 5px;
+}
+.email-btn {
+  background-color: $secondary-color;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  width: 267px;
+  height: 65px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.sns {
+  display: flex;
+}

@@ -7,11 +7,11 @@ gulp.task('default', function() {
 });
 
 gulp.task('sass', () =>
-    sass('./html/css/scss/*.scss', {
+    sass('./src/css/scss/*.scss', {
             style: 'expanded'
         })
         .on('error', sass.logError)
-        .pipe(gulp.dest('./html/css'))
+        .pipe(gulp.dest('./src/css'))
 );
 
 // Static Server + watching scss/html files
@@ -21,9 +21,10 @@ gulp.task('serve', ['sass'], function() {
         server: "./"
     });
 
-    gulp.watch("scss/*.scss", ['sass']);
+    gulp.watch("./src/css/scss/*.scss", ['sass']);
+    gulp.watch("./src/css/*.css").on('change', browserSync.reload);
     gulp.watch("*.html").on('change', browserSync.reload);
-    gulp.watch("js/*.js").on('change', browserSync.reload);
+    gulp.watch("./src/js/*.js").on('change', browserSync.reload);
 });
 
 // Static server

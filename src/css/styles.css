@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* variables */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro W4", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+}
+
+a {
+  color: #12A738;
+}
+
+header {
+  background: no-repeat center 10px/128px url(/src/img/portlait_mobile@2x.png) #FFDC00;
+}
+header h1 {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3";
+  padding-top: 153px;
+  text-align: center;
+}
+header h1 .profession {
+  display: block;
+}
+header h1 .name {
+  color: #E74400;
+  display: block;
+  font-family: "Hiragino Kaku Gothic StdN", "ヒラギノ角ゴ StdN";
+}
+
+nav {
+  display: none;
+}
+
+.area {
+  background-color: #FAF9F4;
+}
+.area:nth-child(even) {
+  background-color: #ECECEC;
+}
+.area h2 {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3";
+}
+.area h3 {
+  color: #E74400;
+}
+
+.certification {
+  background-color: #FAF9F4;
+  border-radius: 5px;
+}
+
+.email-btn {
+  background-color: #E74400;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  width: 267px;
+  height: 65px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.sns {
+  display: flex;
+}
