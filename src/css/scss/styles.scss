@@ -1,7 +1,7 @@
 /* variables */
 $font-base: 'Hiragino Maru Gothic Pro', 'ヒラギノ丸ゴ Pro W4', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-$font-gothic: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3';
-$font-gothic-bold: 'Hiragino Kaku Gothic StdN', 'ヒラギノ角ゴ StdN';
+$font-gothic: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+$font-gothic-bold: 'Hiragino Kaku Gothic StdN', 'ヒラギノ角ゴ StdN', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
 $primary-color: #FFDC00;
 $secondary-color: #E74400;
 $bgcolor-light: #FAF9F4;
@@ -9,6 +9,21 @@ $bgcolor-dark: #ECECEC;
 $link-color: #12A738;
 
 /* reset */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+button {
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
 h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
@@ -16,6 +31,9 @@ h1, h2, h3, p, ul {
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
+}
+h3 {
+  font-weight: normal;
 }
 
 li {
@@ -28,8 +46,13 @@ html,body {
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: $font-base;
+  font-size: 1.4em;
 }
 
 a {
@@ -40,10 +63,13 @@ header {
   background: no-repeat center 10px/128px url(/src/img/portlait_mobile@2x.png) $primary-color;
   h1 {
     font-family: $font-gothic;
+    font-size: 1.8rem;
     padding-top: 153px;
+    margin-bottom: 15px;
     text-align: center;
     .profession {
       display: block;
+      margin-bottom: 5px;
     }
     .name {
       color: $secondary-color;
@@ -52,8 +78,18 @@ header {
     }
   }
   .biography {
+    line-height: 1.3;
     width: 78%;
     margin: 0 auto;
+  }
+  .arrow {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    img {
+      width: 32px;
+      height: auto;
+    }
   }
 }
 
@@ -69,30 +105,53 @@ nav {
   }
   h2 {
     font-family: $font-gothic;
+    font-size: 2.2rem;
   }
   h3 {
     color: $secondary-color;
+    font-size: 1.6rem;
     margin-top: 10px;
   }
   .txt {
-    margin-top: 10px;
+    line-height: 1.3;
+    margin-top: 5px;
   }
 }
 
 .certification {
-  background-color: $bgcolor-light;
+  background: no-repeat right 10px center/57px url(/src/img/certification@2x.png) $bgcolor-light;
   border-radius: 5px;
+  color: #333;
+  display: table;
+  font-size: 1.2rem;
+  line-height: 1.3;
   margin: 10px 0;
-  padding: 10px;
+  min-height: 91px;
+  padding: 10px 80px 10px 10px;
+  p {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.contact {
+  margin: 20px 0 70px;
 }
 .email-btn {
   background-color: $secondary-color;
   border-radius: 5px;
+  box-shadow: 0 5px 0 #944038;
   color: #fff;
   display: block;
+  font-size: 2rem;
   width: 267px;
   height: 65px;
   margin: 0 auto;
+  &:active {
+    position: relative;
+    top: 3px; /* 3px drop */
+    box-shadow: 0 0 0 #944038; /* less by 3px (to zero) */
+  }
 }
 
 footer {
@@ -103,4 +162,19 @@ footer {
 
 .sns {
   display: flex;
+}
+
+.to_pagetop {
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(10, 10, 10, .5);
 }
