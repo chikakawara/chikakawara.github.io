@@ -54,12 +54,19 @@ a {
 }
 
 header {
-  background: no-repeat center 10px/128px url(/src/img/portlait_mobile@2x.png) #FFDC00;
+  background-color: #FFDC00;
+  padding: 15px;
+}
+header::before {
+  content: '';
+  background: no-repeat center/128px url(/src/img/portlait_mobile@2x.png);
+  display: block;
+  height: 128px;
+  margin-bottom: 15px;
 }
 header h1 {
   font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
   font-size: 1.8rem;
-  padding-top: 153px;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -80,13 +87,41 @@ header .biography {
 header .arrow {
   text-align: center;
   margin-top: 20px;
-  padding-bottom: 20px;
 }
 header .arrow img {
   width: 32px;
   height: auto;
 }
 
+@media screen and (min-width: 641px) {
+  header {
+    border-radius: 10px;
+    margin: 25px 15px 15px;
+    min-height: 300px;
+    position: relative;
+  }
+  header::before {
+    background-image: url(/src/img/portlait@2x.png);
+    background-size: contain;
+    width: 348px;
+    height: 330px;
+    position: absolute;
+    top: -20px;
+  }
+  header .header-contents {
+    margin-left: 348px;
+  }
+  header h1 {
+    margin-top: 30px;
+    text-align: left;
+  }
+  header .biography {
+    width: 100%;
+  }
+  header .arrow {
+    margin-top: 60px;
+  }
+}
 nav {
   display: none;
 }
@@ -112,6 +147,34 @@ nav {
   margin-top: 5px;
 }
 
+@media screen and (min-width: 641px) {
+  .area {
+    background-color: transparent;
+    display: flex;
+    margin: 0 15px 15px;
+    padding: 0;
+  }
+  .area:nth-child(even) {
+    background-color: transparent;
+  }
+  .area h2 {
+    min-width: 11rem;
+  }
+  .area .area-contents {
+    background-color: #FAF9F4;
+    border-radius: 10px;
+    flex-grow: 2;
+    padding: 10px 20px;
+  }
+}
+@media (min-width: 769px) {
+  header,
+  .area {
+    width: 738px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .certification {
   background: no-repeat right 10px center/57px url(/src/img/certification@2x.png) #FAF9F4;
   border-radius: 5px;
@@ -128,10 +191,20 @@ nav {
   vertical-align: middle;
 }
 
+@media screen and (min-width: 641px) {
+  .certification {
+    background-color: #fff;
+  }
+}
 .contact {
   margin: 20px 0 70px;
 }
 
+@media screen and (min-width: 641px) {
+  .contact {
+    margin-bottom: 25px;
+  }
+}
 .email-btn {
   text-decoration: none;
 }
@@ -166,17 +239,17 @@ footer {
 .sns {
   display: flex;
 }
-.sns a {
+.sns li {
   align-items: center;
   background: #222;
   flex-grow: 1;
-  padding: 14px 0;
 }
-.sns a:nth-child(even) {
+.sns li:nth-child(even) {
   background: #333;
 }
-.sns a li {
-  width: 100%;
+.sns li a {
+  display: block;
+  padding: 14px 0;
 }
 .sns i {
   color: #fff;
@@ -184,6 +257,22 @@ footer {
   width: 4rem;
 }
 
+@media screen and (min-width: 992px) {
+  .sns {
+    justify-content: center;
+    padding-top: 15px;
+  }
+  .sns li {
+    background: transparent;
+    flex-grow: 0;
+  }
+  .sns li:nth-child(even) {
+    background: transparent;
+  }
+  .sns li a {
+    padding: 0;
+  }
+}
 .copyright {
   font-size: 1.2rem;
   padding: 15px 0;
@@ -202,4 +291,10 @@ footer {
   align-items: center;
   border-radius: 8px;
   background: rgba(10, 10, 10, 0.5);
+}
+
+@media screen and (min-width: 641px) {
+  .to_pagetop {
+    bottom: 105px;
+  }
 }

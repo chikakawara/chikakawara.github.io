@@ -12,21 +12,24 @@
   <link href="./node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css" rel="stylesheet">
   <link href="./node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css" rel="stylesheet">
   <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
-  <link rel="stylesheet" href="./src/css/styles.css"> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./src/css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./src/js/main.js"></script> -->
   <script src="./dist/bundle.js"></script>
 </head>
 <body>
   <header>
-    <h1>
-      <span class="profession">フロントエンドWebエンジニア</span>
-      <span class="name">河原千佳</span>
-    </h1>
-    <p class="biography">
-      90年代後半よりIT・通信・ゲーム開発企業などでウェブサイト開発に従事したのち、2018年フリーランスに転向。東京都豊島区在住。
-    </p>
-    <div class="arrow"><a href="#speciality"><img src="/src/img/arrow@2x.png" alt=""></a></div>
+
+    <div class="header-contents">
+      <h1>
+        <span class="profession">フロントエンドWebエンジニア</span>
+        <span class="name">河原千佳</span>
+      </h1>
+      <p class="biography">
+        90年代後半よりIT・通信・ゲーム開発企業などでウェブサイト開発に従事したのち、2018年フリーランスに転向。東京都豊島区在住。
+      </p>
+      <div class="arrow"><a href="#speciality"><img src="/src/img/arrow@2x.png" alt=""></a></div>
+    </div>
   </header>
   <nav>
     <ul>
@@ -39,29 +42,35 @@
   <section class="contents">
     <section id="speciality" class="area">
       <h2>仕事領域</h2>
-      <p class="txt">
-        ウェブサイト画面制作全般<br>
-        新規作成・機能追加・改善など
-      </p>
+      <div class="area-contents">
+        <p class="txt">
+          ウェブサイト画面制作全般<br>
+          新規作成・機能追加・改善など
+        </p>
+      </div>
     </section>
     <section id="skills" class="area">
       <h2>スキル</h2>
-      <h3>HTML5</h3>
-      <p class="txt">アクセシビリティーに配慮した、簡潔でセマンティックなHTMLを記述します。</p>
-      <div class="certification">
-        <p>特定非営利活動法人エルピーアイジャパン（LPI-Japan）による認定資格「<a href="https://html5exam.jp/" target="_blank">HTML5プロフェッショナル認定試験 レベル2</a>」を取得しています。</p>
+      <div class="area-contents">
+        <h3>HTML5</h3>
+        <p class="txt">アクセシビリティーに配慮した、簡潔でセマンティックなHTMLを記述します。</p>
+        <div class="certification">
+          <p>特定非営利活動法人エルピーアイジャパン（LPI-Japan）による認定資格「<a href="https://html5exam.jp/" target="_blank">HTML5プロフェッショナル認定試験 レベル2</a>」を取得しています。</p>
+        </div>
+        <h3>CSS3</h3>
+        <p class="txt">拡張性・保守性に配慮した設計を行います。</p>
+        <h3>JavaScript</h3>
+        <p class="txt">jQueryプラグインの導入から、HTML5 APIを活用した機能実装まで。</p>
       </div>
-      <h3>CSS3</h3>
-      <p class="txt">拡張性・保守性に配慮した設計を行います。</p>
-      <h3>JavaScript</h3>
-      <p class="txt">jQueryプラグインの導入から、HTML5 APIを活用した機能実装まで。</p>
     </section>
     <section id="principles" class="area">
       <h2>ポリシー</h2>
-      <p class="txt">
-        きめ細やかな情報共有<br>
-        わかりやすい資料の作成
-      </p>
+      <div class="area-contents">
+        <p class="txt">
+          きめ細やかな情報共有<br>
+          わかりやすい資料の作成
+        </p>
+      </div>
     </section>
   </section>
   <section class="contact" id="contact">
@@ -69,9 +78,9 @@
   </section>
   <footer>
     <ul class="sns">
-      <a href="https://twitter.com/chikasweet"><li><i class="fab fa-twitter"></i></li></a>
-      <a href="https://www.facebook.com/chikaautumn"><li><i class="fab fa-facebook-f"></i></li></a>
-      <a href="https://github.com/okaka/"><li><i class="fab fa-github"></i></li></a>
+      <li><a href="https://twitter.com/chikasweet"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.facebook.com/chikaautumn"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://github.com/okaka/"><i class="fab fa-github"></i></a></li>
     </ul>
     <p class="copyright">&copy; 2018 - Chika Kawara All rights reserved.</p>
   </footer>
