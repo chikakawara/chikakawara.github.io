@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  var to_pagetop = $('.to_pagetop');
+  var to_pagetop = $('#to_pagetop');
+  to_pagetop.hide();
     $(window).scroll(function () {
        if ($(this).scrollTop() > 100) {
             to_pagetop.fadeIn();
