@@ -10,7 +10,9 @@
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {
-    "gulp-ruby-sass": "^3.0.0"
+    "gulp-ruby-sass": "^3.0.0",
+    "webpack": "^4.6.0",
+    "webpack-stream": "^4.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
