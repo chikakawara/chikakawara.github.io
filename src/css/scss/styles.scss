@@ -138,19 +138,25 @@ nav {
   margin: 20px 0 70px;
 }
 .email-btn {
-  background-color: $secondary-color;
-  border-radius: 5px;
-  box-shadow: 0 5px 0 #944038;
-  color: #fff;
-  display: block;
-  font-size: 2rem;
-  width: 267px;
-  height: 65px;
-  margin: 0 auto;
-  &:active {
-    position: relative;
-    top: 3px; /* 3px drop */
-    box-shadow: 0 0 0 #944038; /* less by 3px (to zero) */
+  text-decoration: none;
+  button {
+    background-color: $secondary-color;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 #944038;
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    width: 267px;
+    height: 65px;
+    margin: 0 auto;
+    &:active {
+      position: relative;
+      top: 3px; /* 3px drop */
+      box-shadow: 0 0 0 #944038; /* less by 3px (to zero) */
+    }
+    i {
+      margin-right: 5px;
+    }
   }
 }
 
@@ -162,14 +168,41 @@ footer {
 
 .sns {
   display: flex;
+
+  a {
+    align-items: center;
+    background: #222;
+    flex-grow: 1;
+    padding: 14px 0;
+    // margin: 10px 20px 0 0;
+    // &:last-child {
+    //   margin-right: 0;
+    // }
+    &:nth-child(even) {
+      background: #333;
+    }
+    li {
+      width: 100%;
+    }
+  }
+  i {
+    color: #fff;
+    font-size: 2rem;
+    width: 4rem;
+  }
+}
+
+.copyright {
+  font-size: 1.2rem;
+  padding: 15px 0;
 }
 
 .to_pagetop {
   color: #fff;
   cursor: pointer;
   position: fixed;
-  bottom: 40px;
-  right: 10px;
+  bottom: 100px;
+  right: 15px;
   width: 50px;
   height: 50px;
   display: flex;
