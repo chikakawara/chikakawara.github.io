@@ -197,14 +197,9 @@ nav {
   }
 }
 .contact {
-  margin: 20px 0 70px;
+  margin: 20px 0 25px;
 }
 
-@media screen and (min-width: 641px) {
-  .contact {
-    margin-bottom: 25px;
-  }
-}
 .email-btn {
   text-decoration: none;
 }
@@ -226,7 +221,7 @@ nav {
   box-shadow: 0 0 0 #944038;
   /* less by 3px (to zero) */
 }
-.email-btn button i {
+.email-btn button svg {
   margin-right: 5px;
 }
 
@@ -248,7 +243,9 @@ footer {
   background: #333;
 }
 .sns li a {
+  color: #fff;
   display: block;
+  font-size: 2rem;
   padding: 14px 0;
 }
 .sns i {
@@ -265,11 +262,13 @@ footer {
   .sns li {
     background: transparent;
     flex-grow: 0;
+    width: 3rem;
   }
   .sns li:nth-child(even) {
     background: transparent;
   }
   .sns li a {
+    font-size: 1.6rem;
     padding: 0;
   }
 }
